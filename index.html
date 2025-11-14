@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Memory Chain - Ultimate Memory Challenge</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="welcome-screen">
+      <div class="container">
+        <header>
+          <h1>🌈 Color Memory Chain</h1>
+          <p>The Ultimate Memory Challenge!</p>
+        </header>
+
+        <div class="welcome-card">
+          <div class="game-icon">🌈</div>
+          <h2>Welcome, Memory Master!</h2>
+          <p class="welcome-text">
+            Enter your name to start tracking your progress!
+          </p>
+
+          <div class="name-input-section">
+            <input
+              type="text"
+              id="playerName"
+              placeholder="Enter your name..."
+              maxlength="20"
+              autocomplete="off"
+            />
+            <button class="name-submit-btn" onclick="submitPlayerName()">
+              Let's Play! 🚀
+            </button>
+          </div>
+
+          <div class="returning-player">
+            <p>Returning player?</p>
+            <div id="savedPlayers" class="saved-players"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Game Screen -->
+    <div id="mainScreen" class="main-screen" style="display: none">
+      <div class="container">
+        <header class="main-header">
+          <div class="player-info">
+            <div class="player-name">
+              👋 Hello, <span id="currentPlayerName"></span>!
+            </div>
+            <button class="change-player-btn" onclick="changePlayer()">
+              Change Player
+            </button>
+          </div>
+          <h1>🌈 Color Memory Chain</h1>
+          <p>The Ultimate Memory Challenge!</p>
+        </header>
+
+        <div class="game-intro">
+          <div class="main-game-card">
+            <div class="game-icon">🌈</div>
+            <h2>Master the Colors, Conquer Your Mind!</h2>
+            <div class="player-stats">
+              <div class="stat-item">
+                <span class="stat-icon">🏆</span>
+                <span class="stat-label">Best Level:</span>
+                <span id="playerBestLevel" class="stat-value">0</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-icon">⭐</span>
+                <span class="stat-label">High Score:</span>
+                <span id="playerHighScore" class="stat-value">0</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-icon">🎮</span>
+                <span class="stat-label">Games Played:</span>
+                <span id="gamesPlayed" class="stat-value">0</span>
+              </div>
+            </div>
+            <div class="start-section">
+              <button class="play-btn" onclick="startColorGame()">
+                <span class="btn-text">Start Playing</span>
+                <span class="btn-subtitle">Can you reach level 50?</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <p>
+            <p class="site-tagline">A Project by <strong>Asiya Farseen</strong> • <em>BluePebbleLibrary</em> • Compete. Play. Win.</p>
+
+        
+          </p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

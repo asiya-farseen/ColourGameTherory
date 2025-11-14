@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Memory Chain</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/color-memory.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <header class="game-header">
+        <button class="back-btn" onclick="goHome()">← Back</button>
+        <div class="game-info">
+          <h1>🌈 Color Memory Chain</h1>
+          <div class="player-game-info">
+            <div class="current-player">
+              Playing as: <span id="gamePlayerName">Guest</span>
+            </div>
+            <div class="stats">
+              <span>Level: <span id="level">1</span> / 50</span>
+              <span>Score: <span id="score">0</span></span>
+              <span>Best: <span id="highScore">0</span></span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="game-area">
+        <!-- Game Status Display -->
+        <div class="status-display">
+          <div id="gameStatus" class="game-status">Get Ready!</div>
+          <div id="instructionDisplay" class="instruction-display">
+            Can you reach level 50 and become a Color Memory Master?
+          </div>
+          <div id="colorMeaningDisplay" class="color-meaning-display"></div>
+        </div>
+
+        <!-- Color Grid -->
+        <div class="color-grid" id="colorGrid">
+          <div
+            class="color-button red"
+            data-color="red"
+            onclick="playerClick('red')"
+          ></div>
+          <div
+            class="color-button blue"
+            data-color="blue"
+            onclick="playerClick('blue')"
+          ></div>
+          <div
+            class="color-button green"
+            data-color="green"
+            onclick="playerClick('green')"
+          ></div>
+          <div
+            class="color-button yellow"
+            data-color="yellow"
+            onclick="playerClick('yellow')"
+          ></div>
+          <div
+            class="color-button purple"
+            data-color="purple"
+            onclick="playerClick('purple')"
+          ></div>
+          <div
+            class="color-button orange"
+            data-color="orange"
+            onclick="playerClick('orange')"
+          ></div>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="controls">
+          <button
+            id="startBtn"
+            class="control-btn primary"
+            onclick="startGame()"
+          >
+            Start Game
+          </button>
+          <button
+            id="replayBtn"
+            class="control-btn secondary"
+            onclick="replaySequence()"
+            style="display: none"
+          >
+            Replay Sequence
+          </button>
+          <button
+            id="nextLevelBtn"
+            class="control-btn success"
+            onclick="nextLevel()"
+            style="display: none"
+          >
+            Next Level
+          </button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+          <div class="progress-text">
+            <span id="currentStep">0</span> / <span id="totalSteps">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Over Modal -->
+      <div id="gameOverModal" class="modal" style="display: none">
+        <div class="modal-content">
+          <h2>🎮 Game Over!</h2>
+          <div class="final-stats">
+            <p>Final Level: <span id="finalLevel"></span> / 50</p>
+            <p>Final Score: <span id="finalScore"></span></p>
+            <p id="newHighScore" style="display: none">🎉 New High Score!</p>
+            <div id="achievementsList" class="achievements"></div>
+          </div>
+          <div class="modal-buttons">
+            <button class="control-btn primary" onclick="restartGame()">
+              Play Again
+            </button>
+            <button class="control-btn secondary" onclick="goHome()">
+              Main Menu
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../scripts/color-memory.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "name": "memory-word-games",
+  "version": "1.0.0",
+  "description": "Interactive Color Memory Chain and Word Fusion games optimized for Azure deployment",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "live-server --port=3000",
+    "build": "echo 'No build step required - static files ready for deployment'",
+    "deploy:azure": "az webapp deployment source config-zip --resource-group myResourceGroup --name myAppName --src game.zip"
+  },
+  "keywords": [
+    "memory-game",
+    "word-game",
+    "puzzle",
+    "creativity",
+    "browser-game",
+    "azure",
+    "javascript",
+    "html5"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/memory-word-games.git"
+  },
+  "homepage": "https://yourgame.azurewebsites.net",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
