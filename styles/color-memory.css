@@ -327,3 +327,60 @@
     flex-direction: column;
   }
 }
+
+/* Small Mobile Phones - Game Screen */
+@media (max-width: 480px) {
+  .game-container {
+    padding: 10px;
+  }
+
+  .game-header {
+    gap: 10px;
+  }
+
+  .game-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .stats {
+    gap: 8px;
+  }
+
+  .stat {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .color-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 240px;
+    gap: 10px;
+    margin: 20px auto;
+  }
+
+  .color-button {
+    width: 70px;
+    height: 70px;
+    font-size: 0.8rem;
+  }
+
+  .control-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin: 3px;
+    min-width: 120px;
+  }
+
+  .modal-content {
+    padding: 20px 15px;
+    margin: 10px;
+  }
+
+  .modal h2 {
+    font-size: 1.4rem;
+  }
+
+  .modal p {
+    font-size: 0.9rem;
+  }
+}
